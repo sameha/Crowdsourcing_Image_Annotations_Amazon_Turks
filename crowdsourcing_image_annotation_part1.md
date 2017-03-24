@@ -1,5 +1,5 @@
 
-# Tutorial: Crowdsourcing Image Annotations - Part 1
+# Crowdsourcing Image Annotations - Part 1
 In this tutorial, we are going to use Boto3, the AWS SDK for Python Version 3, to access the Amazon Mechanical Turk API. After installing the Boto SDK, we are going to use Boto3 for croudsourcing image annotations.
 
 This first part shows how to use Boto to create HITs and retrieve results. 
