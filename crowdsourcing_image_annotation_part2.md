@@ -8,22 +8,22 @@ This second part shows how to use Boto3 to create HITs with the MTurk Requester 
 ## Create a Project
 After you’ve signed up, the first step is to create a HIT layout in the Requester website. To create a layout, you need to first create a project. Log in to https://requestersandbox.mturk.com/ and then click on “Create” and then click on “New Project”.
 
-![Create New Project](crowdsourcing_image_annotation_part2_img1.png)
+![Create New Project](images/crowdsourcing_image_annotation_part2_img1.png)
 
 You will be asked what kind of Project you want to create. Click on the “Other” option.
 
-![Other Project](crowdsourcing_image_annotation_part2_img2.png)
+![Other Project](images/crowdsourcing_image_annotation_part2_img2.png)
 
 On the next page, fill out the properties section. Note that the values you fill out in the properties section can be defined later in your code.
 
-![Properties Section](crowdsourcing_image_annotation_part2_img3.png)
+![Properties Section](images/crowdsourcing_image_annotation_part2_img3.png)
 
 Once done, click on the “Design Layout” tab.
 
 ## Design your HIT
 In the Design Layout section, you can set up your HIT layout using HTML markup. You can then add template variables which you will substitute with real data when you actually start creating HITs using this layout later on. First, click on the “Source” button to reveal the source code for the template.
 
-![Source Section](crowdsourcing_image_annotation_part2_img4.png)
+![Source Section](images/crowdsourcing_image_annotation_part2_img4.png)
 
 Now replace the boilerplate source code you above with the following:
 
@@ -51,7 +51,7 @@ In the bold area above, we replaced the question text “Please name the company
 
 Once saved, you’ll want to click the Project’s name to bring up this dialog box:
 
-<img src="crowdsourcing_image_annotation_part2_img5.png" width="500">
+<img src="images/crowdsourcing_image_annotation_part2_img5.png" width="500">
 
 
 
@@ -93,7 +93,7 @@ print("Your HIT ID is: " + hit_id)
 
     Your HIT has been created. You can see it at this link:
     https://workersandbox.mturk.com/mturk/preview?groupId=3XJ5RHVJOB39FCG8U024796RGNXXLM
-    Your HIT ID is: 34XASH8KLQM5MTOJETOLTT6MERUPMZ
+    Your HIT ID is: 39O0SQZVJN77D3XBNFQLF69BKNSR7T
 
 
 You’ll see that we referenced the “question” HITLayoutParameters, and supplied it a value (“Please name the company that created the iPhone”). We then referenced the HIT Layout ID from the screenshot, and the HIT Type ID (to define the title, reward amount, and more without having to specify each in our code). Notice how this is less than half as many lines of code as in our previous example. This is because all of the definition of the question has been stored in a HITLayout data structure and the HIT parameters are stored in a HIT Type ID. They are only referenced in this code. Even better, now to create a new HIT but asking a different question, we need only change the line:
