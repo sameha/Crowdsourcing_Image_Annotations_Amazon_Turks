@@ -63,9 +63,9 @@ The previos screen contains the Layout ID and the Layout Parameters that you’l
 import boto3
 
 # Use the Amazon Mechanical Turk Sandbox to publish test Human Intelligence Tasks (HITs) without paying any money.
-# Uncomment the below to connect to the live marketplace
 host = 'https://mturk-requester-sandbox.us-east-1.amazonaws.com'
-# host = 'us-east-1'
+# Uncomment line below to connect to the live marketplace instead of the sandbox
+# host = 'https://mturk-requester.us-east-1.amazonaws.com'
 
 
 client = boto3.client('mturk', endpoint_url=host)
@@ -93,7 +93,7 @@ print("Your HIT ID is: " + hit_id)
 
     Your HIT has been created. You can see it at this link:
     https://workersandbox.mturk.com/mturk/preview?groupId=3XJ5RHVJOB39FCG8U024796RGNXXLM
-    Your HIT ID is: 39O0SQZVJN77D3XBNFQLF69BKNSR7T
+    Your HIT ID is: 3PR3LXCWSFZVOI7GBBUXIKM5HFC9X1
 
 
 You’ll see that we referenced the “question” HITLayoutParameters, and supplied it a value (“Please name the company that created the iPhone”). We then referenced the HIT Layout ID from the screenshot, and the HIT Type ID (to define the title, reward amount, and more without having to specify each in our code). Notice how this is less than half as many lines of code as in our previous example. This is because all of the definition of the question has been stored in a HITLayout data structure and the HIT parameters are stored in a HIT Type ID. They are only referenced in this code. Even better, now to create a new HIT but asking a different question, we need only change the line:
