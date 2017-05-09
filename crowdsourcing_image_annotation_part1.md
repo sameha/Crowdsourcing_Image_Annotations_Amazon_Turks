@@ -28,9 +28,9 @@ import boto3
 
 # Use the Amazon Mechanical Turk Sandbox to publish test Human Intelligence Tasks (HITs) without paying any money.
 
-# Uncomment the below to connect to the live marketplace
 host = 'https://mturk-requester-sandbox.us-east-1.amazonaws.com'
-# host = 'us-east-1'
+# Uncomment line below to connect to the live marketplace instead of the sandbox
+# host = 'https://mturk-requester.us-east-1.amazonaws.com'
 
 
 client = boto3.client('mturk',
@@ -47,7 +47,7 @@ The first row imports the Boto3 library so that it can be used, the second tells
 
 
 ```python
-host = 'us-east-1'
+host = 'https://mturk-requester.us-east-1.amazonaws.com'
 ```
 
 But for now, let’s stick with Sandbox. It will let us test things in a more controlled environment. Once you successfully execute this code in the Sandbox environment, you should see:
@@ -63,6 +63,7 @@ To verify everything is set up correctly, it is often helpful to start by ensuri
 
 To do this, we start by creating '2_boto3_first_hit_question.XML', an XML format that has your question:
 
+```html
 <HTMLQuestion xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2011-11-11/HTMLQuestion.xsd">
   <HTMLContent><![CDATA[
 <!DOCTYPE html>
@@ -86,7 +87,7 @@ To do this, we start by creating '2_boto3_first_hit_question.XML', an XML format
   </HTMLContent>
   <FrameHeight>450</FrameHeight>
 </HTMLQuestion>
-
+```
 
 Next, we’ll execute the following code:
 
@@ -95,9 +96,9 @@ Next, we’ll execute the following code:
 import boto3
 
 # Use the Amazon Mechanical Turk Sandbox to publish test Human Intelligence Tasks (HITs) without paying any money.
-# Uncomment the below to connect to the live marketplace
 host = 'https://mturk-requester-sandbox.us-east-1.amazonaws.com'
-# host = 'us-east-1'
+# Uncomment line below to connect to the live marketplace instead of the sandbox
+# host = 'https://mturk-requester.us-east-1.amazonaws.com'
 
 
 client = boto3.client('mturk',
