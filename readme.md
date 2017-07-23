@@ -15,6 +15,8 @@ The Tutorial is split into four parts:
 
 4. [Crowdsourcing Image Annotations - Part 4](crowdsourcing_image_annotation_part4.md)
 
+5. [Crowdsourcing Image Annotations - Part 5](crowdsourcing_image_annotation_part5.md)
+
 I have developed these tutorials by migrating previous Amazon tutorials for Boto2 and changing the code and steps as needed, specifically:
 
 - [Tutorial: Getting started with MTurk and Python using Boto](https://blog.mturk.com/tutorial-getting-started-with-mturk-and-python-using-boto-452fb0243a30#.eggez6xwf)
