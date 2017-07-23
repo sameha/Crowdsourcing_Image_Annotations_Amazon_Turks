@@ -1,5 +1,8 @@
 
 # Crowdsourcing Image Annotations - Part 3
+
+## Annotating images with bounding boxes using Amazon Mechanical Turk
+
 In this tutorial, we are going to use Boto3, the AWS SDK for Python Version 3, to access the Amazon Mechanical Turk API. After installing the Boto SDK, we are going to use Boto3 for croudsourcing image annotations.
 
 This third part shows how Requesters can use MTurk to locate objects in images. We will create a Human Intelligence Task (HIT) that will ask Workers to draw a bounding box around specific objects. Once the HIT is submitted, the Requester will receive a set of coordinates corresponding to the points the Worker has labeled. This information will allow the Requester to have Workers locate objects in images, so that they can then help train machines to perform the same operation.

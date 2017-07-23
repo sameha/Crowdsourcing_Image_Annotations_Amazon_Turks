@@ -5,13 +5,15 @@ In this tutorial, we are going to use Boto3, the AWS SDK for Python Version 3, t
 This first part shows how to use Boto to create HITs and retrieve results. 
 Then, we are going to develop a project that can use MTurk to locate objects in images. We will create a Human Intelligence Task (HIT) that will ask Workers to draw a bounding box around specific objects. Once the HIT is submitted, the Requester will receive a set of coordinates corresponding to the points the Worker has labeled. This information will allow the Requester to have Workers locate objects in images, so that they can then help train machines to perform the same operation.
 
-The Tutorial is split into three parts:
+The Tutorial is split into four parts:
 
 1. [Crowdsourcing Image Annotations - Part 1](crowdsourcing_image_annotation_part1.md)
 
 2. [Crowdsourcing Image Annotations - Part 2](crowdsourcing_image_annotation_part2.md)
 
 3. [Crowdsourcing Image Annotations - Part 3](crowdsourcing_image_annotation_part3.md)
+
+4. [Crowdsourcing Image Annotations - Part 4](crowdsourcing_image_annotation_part4.md)
 
 I have developed these tutorials by migrating previous Amazon tutorials for Boto2 and changing the code and steps as needed, specifically:
 
