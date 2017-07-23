@@ -161,6 +161,10 @@ if (iou >= iou_threshold_for_bonus):
     {'ResponseMetadata': {'HTTPHeaders': {'content-length': '2', 'date': 'Sun, 23 Jul 2017 17:39:45 GMT', 'x-amzn-requestid': 'eaba5bb9-6fcd-11e7-829e-99266917813b', 'content-type': 'application/x-amz-json-1.1'}, 'HTTPStatusCode': 200, 'RequestId': 'eaba5bb9-6fcd-11e7-829e-99266917813b', 'RetryAttempts': 0}}
 
 
+The worker should get an email indicating he received the bonus, a sample email is shown below:
+
+<img src="images/crowdsourcing_image_annotation_part5_img6.png" width="700">
+
 The code above builds off of the [third part of this tutorial](crowdsourcing_image_annotation_part3.md). Please pay special attention to the first line that is needed to import the Price object used by grant_bonus to pay the Worker a bonus.
 
 This code takes our Known Answer (the one we labeled manually) and uses it to compare the submission from the Worker. Where the submission exceeds an IOU accuracy score of 0.8, we provide the Worker with a bonus.
